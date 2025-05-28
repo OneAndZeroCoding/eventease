@@ -1,25 +1,18 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ProviderCTA from './components/ProviderCTA';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import Services from './components/Services';
-
-
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home'
+import Register_User from './pages/Register_User';
 
 function App(){
   return (
-    <div className="font-sans">
-      <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <ProviderCTA />
-      <Contact />
-      <Footer />
-    </div>
-  );
+
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/register-user' element={<Register_User />} />
+      </Routes>
+    </Router>
+
+  )
 }
 
 export default App;
