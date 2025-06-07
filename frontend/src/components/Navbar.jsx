@@ -1,6 +1,7 @@
 // src/components/Navbar.jsx
 
 import {Link} from 'react-scroll';
+import {Router, Link as RouterLink} from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -40,7 +41,9 @@ function Navbar() {
 
       <div className="space-x-4">
         <button className="text-sm px-4 py-2 border rounded text-white border-white hover:bg-transparent">Login</button>
-        <button className="text-sm px-4 py-2 bg-white text-mocha rounded hover:bg-slate-200">Sign Up</button>
+        <RouterLink to="/register-user">
+          <button className="text-sm px-4 py-2 bg-white text-mocha rounded hover:bg-slate-200">Sign Up</button>
+        </RouterLink>
       </div>
     </nav>
   );

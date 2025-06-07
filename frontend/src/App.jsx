@@ -5,12 +5,10 @@ import Register_User from './pages/Register_User';
 function App(){
   return (
 
-    <Router>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/register-user' element={<Register_User />} />
       </Routes>
-    </Router>
 
   )
 }
